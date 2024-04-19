@@ -3,11 +3,11 @@ run-name: I am learning GitHub Action
 on: [push]
 jobs:
   nice-to-meet-you:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Definir Variable
-      run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-    - name: Correr script
-      run: python hi_world.py
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir Variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python hi_world.py
